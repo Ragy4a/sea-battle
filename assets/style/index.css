@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;    /** он не нужен так как тут всё грид, написал так как Вы говорили что писать нужно всегда **/
+}
+.grid-container{
+    display: grid;
+    width: fit-content;
+    outline: 5px solid;
+    grid-template-columns: repeat(10, 100px);
+    grid-template-rows: repeat(10, 100px);
+}
+.item{
+    margin: 5px;
+    outline: 3px solid;
+}
+/* Colors */
+.item1, .item6, .item7, .item9{
+    background-color: #800080;
+}
+.item2, .item5, .item8{
+    background-color: #00ff00;
+}
+.item3, .item4{
+    background-color: blue;
+}
+/* Positions */
+.item1{
+    grid-column: span 2;
+}
+.item2{
+    grid-area: 1 / 4 / 4;
+}
+.item3{
+    grid-area: 1 / 7 / 1 / 11;
+}
+.item4{
+    grid-area: 3 / 1 / 7;
+}
+.item5{
+    grid-area: 3 / 6 / 3 / 9;
+}
+.item6{
+    grid-area: 3 / 10 / 5;
+}
+.item7{
+    grid-area: 6 / 6 / 8;
+}
+.item8{
+    grid-area: 6 / 10 / 9;
+}
+.item9{
+    grid-area: 8 / 1 / 8 / -9;
+}
+.item10{
+    grid-area: 10 / 5 / 10 / 11;
+    background-color: red;
+}
